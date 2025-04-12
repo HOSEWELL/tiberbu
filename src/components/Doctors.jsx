@@ -46,9 +46,9 @@ const Doctors = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     try {
-      await axios.post('https://tiberbu-backend.onrender.com/api/doctors/', {
+      await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/doctors/`, {
         first_name,
         last_name,
         specialization,
@@ -57,7 +57,7 @@ const Doctors = () => {
         email,
         availability,
       });
-
+  
       // Reset form
       setFirstName('');
       setLastName('');
@@ -67,12 +67,13 @@ const Doctors = () => {
       setPassword('');
       setAvailability([]);
       setShowForm(false);
-
-      fetchDoctors(); // Refresh doctor list
+  
+      fetchDoctors(); 
     } catch (error) {
       console.error('Failed to add doctor:', error);
     }
   };
+  
 
   return (
     <div className="min-h-screen bg-blue-50 p-6 relative">
