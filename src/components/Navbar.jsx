@@ -100,7 +100,7 @@ function Navbar() {
             className="text-gray-900 hover:text-blue-400 cursor-pointer"
             onClick={toggleMenu}
           >
-            Landing
+            Home
           </ScrollLink>
           <ScrollLink
             to="explore"
