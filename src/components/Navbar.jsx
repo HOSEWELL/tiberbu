@@ -1,4 +1,3 @@
-// src/components/Navbar.jsx
 import React, { useState } from 'react';
 import { FaUserDoctor, FaBars } from 'react-icons/fa6';
 import { FaTimes } from 'react-icons/fa';
@@ -27,12 +26,12 @@ function Navbar() {
         </div>
 
         {/* Hamburger Icon (Visible on small screens) */}
-        <div className="md:hidden flex items-center">
+        <div className="md:hidden z-50">
           <button
             onClick={toggleMenu}
-            className="text-gray-900 text-3xl p-3"
+            className="text-gray-900 text-3xl p-2 focus:outline-none"
           >
-            {isMenuOpen ? <FaTimes /> : <FaBars />}
+            {isMenuOpen ? <FaTimes className="text-4xl font-bold" /> : <FaBars />}
           </button>
         </div>
 
@@ -45,7 +44,7 @@ function Navbar() {
             className="text-gray-900 hover:text-blue-400 cursor-pointer"
             activeClass="text-blue-500 font-semibold"
           >
-            Landing
+            Home
           </ScrollLink>
           <ScrollLink
             to="explore"
