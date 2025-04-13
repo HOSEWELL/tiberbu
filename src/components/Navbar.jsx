@@ -1,15 +1,14 @@
 // src/components/Navbar.jsx
 import React, { useState } from 'react';
 import { FaUserDoctor, FaBars } from 'react-icons/fa6';
-import { GiHamburgerMenu } from "react-icons/gi";
+import { FaTimes } from 'react-icons/fa';
+
 import { Link as ScrollLink } from 'react-scroll';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
-  // State to toggle mobile menu visibility
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Toggle menu visibility
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
@@ -31,13 +30,9 @@ function Navbar() {
         <div className="md:hidden flex items-center">
           <button
             onClick={toggleMenu}
-            className="text-gray-900 text-3xl p-3" 
+            className="text-gray-900 text-3xl p-3"
           >
-            {isMenuOpen ? (
-              <span className="text-2xl">X</span> 
-            ) : (
-              <FaBars />
-            )}
+            {isMenuOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>
 
