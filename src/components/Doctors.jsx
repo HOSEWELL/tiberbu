@@ -253,7 +253,7 @@ const Doctors = () => {
                 </ul>
               </div>
 
-              <div className="flex justify-end gap-4 mt-6">
+              <div className="flex justify-end gap-[19em] mt-6">
                 <button
                   type="button"
                   onClick={() => setShowForm(false)}
