@@ -61,7 +61,6 @@ const Bookings = () => {
   return (
     <div className="p-4  max-w-7xl mx-auto">
       <div className="relative bg-gray-50 border shadow-xl rounded-2xl p-6">
-        {/* Close button */}
         <button
           onClick={() => navigate('/home')}
           className="absolute top-4 right-4 text-gray-500 hover:text-red-500 text-xl font-bold"
@@ -103,7 +102,6 @@ const Bookings = () => {
                   </ul>
                 </div>
 
-                {/* Date input inside the card */}
                 <div className="mb-4">
                   <label className="block text-sm font-medium text-gray-700 mb-1">Select Date:</label>
                   <input

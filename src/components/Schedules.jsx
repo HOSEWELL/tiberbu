@@ -46,7 +46,6 @@ const Schedules = () => {
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-4">Appointments Schedule</h1>
 
-      {/* Search input */}
       <div className="mb-6">
         <input
           type="text"

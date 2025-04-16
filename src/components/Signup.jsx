@@ -29,7 +29,6 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Check for any empty fields
     for (const key in formData) {
       if (formData[key].trim() === '') {
         toast.error(`Please fill in the ${key.replace('_', ' ')} field`);
@@ -53,7 +52,6 @@ const Signup = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-blue-50 px-4">
       <div className="relative bg-white p-8 rounded-2xl shadow-2xl w-full max-w-lg">
-        {/* Close Button */}
         <button
           className="absolute top-4 right-4 text-gray-500 hover:text-red-500"
           onClick={() => navigate('/home')}
@@ -91,7 +89,6 @@ const Signup = () => {
             className="w-full p-3 border border-gray-300 rounded-lg focus:outline-blue-500"
           />
 
-          {/* ✅ Gender Dropdown */}
           <select
             name="gender"
             value={formData.gender}

@@ -12,7 +12,6 @@ const Patients = () => {
   useEffect(() => {
     const fetchPatients = async () => {
       try {
-        // Make sure to use import.meta.env for the API base URL
         const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/patients/`);
         console.log("Fetched patients data:", response.data); 
         setPatients(response.data);
@@ -32,7 +31,6 @@ const Patients = () => {
     const query = event.target.value;
     setSearch(query);
 
-    // Filter patients based on search query
     const filtered = patients.filter((patient) => {
       const fullName = `${patient.first_name} ${patient.last_name}`.toLowerCase();
       const gender = patient.gender.toLowerCase();
@@ -52,7 +50,6 @@ const Patients = () => {
     setFilteredPatients(filtered);
   };
 
-  // Toggle insurance number visibility
   const toggleInsuranceVisibility = (id) => {
     setVisibleInsurance((prevState) => ({
       ...prevState,
@@ -63,14 +60,12 @@ const Patients = () => {
   if (loading) return <div className="text-center mt-10">Loading patients...</div>;
   if (error) return <div className="text-red-500 text-center mt-10">{error}</div>;
 
-  // Ensure filteredPatients is an array before calling .map()
   const patientsToDisplay = Array.isArray(filteredPatients) ? filteredPatients : [];
 
   return (
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-4">Registered Patients</h1>
 
-      {/* Search Field */}
       <div className="mb-6">
         <input
           type="text"

@@ -14,7 +14,6 @@ function Landing() {
           </p>
         </div>
 
-        {/* Image Section (Right side) */}
         <div className="md:w-1/2 flex justify-center">
           <img 
             src="/prof.png" 

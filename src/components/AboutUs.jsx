@@ -1,4 +1,3 @@
-// src/pages/AboutUs.jsx
 import React from 'react';
 
 function AboutUs() {

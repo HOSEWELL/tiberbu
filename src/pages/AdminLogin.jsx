@@ -1,4 +1,3 @@
-// src/pages/AdminLogin.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { IoClose } from 'react-icons/io5';
@@ -20,7 +19,6 @@ function AdminLogin() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-blue-300 px-4">
       <div className="relative bg-white p-10 rounded-2xl shadow-xl w-full max-w-md">
-        {/* Close Icon */}
         <button
           onClick={() => navigate('/home')}
           className="absolute top-4 right-4 text-gray-500 hover:text-red-500 transition"

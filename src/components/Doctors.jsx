@@ -129,7 +129,6 @@ const Doctors = () => {
         </div>
       )}
 
-      {/* Floating Add Doctor Button */}
       <button
         onClick={() => setShowForm(true)}
         className="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full shadow-lg text-lg"
@@ -137,7 +136,6 @@ const Doctors = () => {
         + Add New Doctor
       </button>
 
-      {/* Modal */}
       {showForm && (
         <div className="fixed inset-0 bg-black bg-opacity-30 flex justify-center items-center z-50">
           <div className="bg-white rounded-xl shadow-lg p-6 w-full max-w-lg">
@@ -200,7 +198,6 @@ const Doctors = () => {
                 />
               </div>
 
-              {/* Availability Section */}
               <div>
                 <label className="block text-sm font-medium text-gray-700">Availability</label>
                 <div className="flex flex-wrap items-center gap-2 mt-1">
@@ -240,7 +237,6 @@ const Doctors = () => {
                   </button>
                 </div>
 
-                {/* Preview list */}
                 <ul className="mt-2 list-disc ml-6 text-sm text-gray-600">
                   {availability.map((slot, index) => {
                     const [day, time] = Object.entries(slot)[0];

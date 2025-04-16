@@ -22,7 +22,6 @@ const Signin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // ✅ Basic input validation
     if (!formData.email || !formData.password) {
       toast.error('Please fill in all fields');
       return;
@@ -34,7 +33,6 @@ const Signin = () => {
         formData
       );
 
-      // 🟢 Save patient ID for later use (you get it from API response)
       localStorage.setItem('patientId', response.data.id);
 
       toast.success('Login successful!');
@@ -47,7 +45,6 @@ const Signin = () => {
   return (
     <div id='signin' className="flex justify-center items-center h-screen bg-blue-50 px-4">
       <div className="relative bg-white p-8 rounded-lg shadow-xl w-full max-w-lg">
-        {/* Close (X) button */}
         <button
           className="absolute top-4 right-4 text-gray-500 hover:text-red-500"
           onClick={() => navigate('/home')}

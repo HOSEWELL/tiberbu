@@ -25,7 +25,6 @@ function Navbar() {
           </ScrollLink>
         </div>
 
-        {/* Hamburger Icon (Visible on small screens) */}
         <div className="md:hidden z-50">
           <button
             onClick={toggleMenu}
@@ -35,7 +34,6 @@ function Navbar() {
           </button>
         </div>
 
-        {/* Center Navbar Links (Visible on large screens) */}
         <div className={`hidden md:flex space-x-20`}>
           <ScrollLink
             to="landing"
@@ -75,7 +73,6 @@ function Navbar() {
           </ScrollLink>
         </div>
 
-        {/* Admin Link on the far right (Visible on large screens) */}
         <div className="hidden md:flex">
           <Link
             to="/admin"
@@ -86,7 +83,6 @@ function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu (Visible on small screens) */}
       <div
         className={`md:hidden absolute top-0 left-0 w-full bg-gradient-to-br from-blue-50 to-blue-200 text-gray-900 py-5 shadow-md transition-transform transform ${
           isMenuOpen ? 'translate-x-0' : '-translate-x-full'

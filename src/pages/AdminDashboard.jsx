@@ -1,4 +1,3 @@
-// src/pages/AdminDashboard.jsx
 import React, { useState } from 'react';
 import Sidebar from '../components/Sidebar';
 import { Routes, Route, Navigate } from 'react-router-dom';
@@ -28,12 +27,9 @@ function AdminDashboard() {
 
   return (
     <div className="flex h-screen bg-blue-50">
-      {/* Sidebar */}
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
 
-      {/* Main content */}
       <div className="flex-1 flex flex-col overflow-y-auto">
-        {/* Mobile Nav Toggle */}
         <div className="md:hidden p-4">
           <button
             onClick={toggleSidebar}
